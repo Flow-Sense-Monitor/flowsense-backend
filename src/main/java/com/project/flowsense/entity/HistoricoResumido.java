@@ -13,8 +13,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Histórico agregado por minuto: em vez de gravar cada leitura de 2 s,
+ * Histórico agregado por minuto: em vez de gravar cada leitura que chega,
  * guardamos médias, máximos e o consumo daquele minuto.
+ * Como o ESP32 manda pelo menos uma leitura por minuto, praticamente todo minuto ganha uma linha.
  */
 @Entity
 @Table(name = "historico_resumido")
